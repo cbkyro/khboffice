@@ -183,51 +183,47 @@
     </section>
 
     <section class="productView-details">
-        <div class="productView-options">
-            {{#if product.release_date }}
-                <p>{{product.release_date}}</p>
-            {{/if}}
-            <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
-                  data-cart-item-add>
-                <input type="hidden" name="action" value="add">
-                <input type="hidden" name="product_id" value="{{product.id}}"/>
-                    {{#each product.customizations}}
-                        {{{dynamicComponent 'components/products/customizations'}}}
-                    {{/each}}
-                <div data-product-option-change style="display:none;">
-                    {{#each product.options}}
-                        {{{dynamicComponent 'components/products/options'}}}
-                    {{/each}}
-                </div>
-                {{#if product.event_date}}
-                    {{> components/products/event-date}}
-                {{/if}}
-                <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
-                    <label class="form-label form-label--alternate">
-                        {{lang 'products.current_stock'}}
-                        <span data-product-stock>{{product.stock_level}}</span>
-                    </label>
-                </div>
-                {{#if product.can_purchase}}
-                    {{> components/products/add-to-cart}}
-                {{/if}}
-                {{#if product.out_of_stock}}
-                    {{#if product.out_of_stock_message}}
-                        {{> components/common/alert-error product.out_of_stock_message}}
-                    {{else}}
-                        {{> components/common/alert-error (lang 'products.sold_out')}}
-                    {{/if}}
-                {{/if}}
-            </form>
-            {{#if settings.show_wishlist}}
-                <!--form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
-                    <div class="form-action">
-                        <input type="hidden" name="variation_id" value="">
-                        <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
-                    </div>
-                </form-->
-            {{/if}}
-        </div>
+
+	        <div class="productView-options">
+	            {{#if product.release_date }}
+	                <p>{{product.release_date}}</p>
+	            {{/if}}
+	            <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+	                  data-cart-item-add>
+	                <input type="hidden" name="action" value="add">
+	                <input type="hidden" name="product_id" value="{{product.id}}"/>
+	                    {{#each product.customizations}}
+	                        {{{dynamicComponent 'components/products/customizations'}}}
+	                    {{/each4>		                <div data-product-option-chant" style="display:none;">		                    {{#each product.options}}		                        {{{dynamicComponent 'components/products/options'}}}		                    {{/each}}		                </div>
+	                {{#if product.event_date}}
+	                    {{> components/products/event-date}}
+	                {{/if}}
+	                <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
+	                    <label class="form-label form-label--alternate">
+	                        {{lang 'products.current_stock'}}
+	                        <span data-product-stock>{{product.stock_level}}</span>
+	                    </label>
+	                </div>
+	                {{#if product.can_purchase}}
+	                    {{> components/products/add-to-cart}}
+	                {{/if}}
+	                {{#if product.out_of_stock}}
+	                    {{#if product.out_of_stock_message}}
+	                        {{> components/common/alert-error product.out_of_stock_message}}
+	                    {{else}}
+	                        {{> components/common/alert-error (lang 'products.sold_out')}}
+	                    {{/if}}
+	                {{/if}}
+	            </form>
+	            {{#if settings.show_wishlist}}
+	                <!--form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
+	                    <div class="form-action">
+	                        <input type="hidden" name="variation_id" value="">
+	                        <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+	                    </div>
+	                </form-->
+	            {{/if}}
+	        </div>
         {{> components/common/share}}
         {{{snippet 'product_details'}}}
     </section>

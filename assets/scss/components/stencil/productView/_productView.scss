@@ -107,7 +107,7 @@
 // -----------------------------------------------------------------------------
 
 .productView-details {
-    margin-bottom: spacing("single") + spacing("third");
+    // margin-bottom: spacing("single") + spacing("third");
 }
 
 
@@ -117,7 +117,7 @@
 .productView-product {
     @include breakpoint("medium") {
         border-bottom: container("border");
-        padding-bottom: spacing("single") + spacing("third");
+        /*padding-bottom: spacing("single") + spacing("third");*/
     }
 
     > :last-child {

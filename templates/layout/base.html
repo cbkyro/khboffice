@@ -21,6 +21,11 @@
         {{{snippet 'htmlhead'}}}
         
         <link href="https://quoteninja-cdn.firebaseapp.com/styles.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Product page jquery - desc accordion -->
+        {{#if page_type '===' 'product'}}
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {{/if}}
     </head>
     <body>
         {{{snippet 'header'}}}

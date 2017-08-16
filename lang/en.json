@@ -618,7 +618,7 @@
         "featured": "Featured Products",
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
         "new": "New Products",
-        "warranty": "Warranty Information",
+        "warranty": "Additional Requirements",
         "reviews": {
             "hide": "Hide Reviews",
             "new": "Write a Review",
