@@ -1,6 +1,8 @@
 {{#if children}}
-<a class="navPages-action has-subMenu" href="{{url}}" data-collapsible="navPages-{{id}}">
+<a class="mab{ages}
+has-subMenu dropdown-toggle" href="{{url}}" data-collapsible="navPages-{{id}}">
     {{name}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+    <b class="caret"></b>
 </a>
 <div class="navPage-subMenu" id="navPages-{{id}}" aria-hidden="true" tabindex="-1">
     <ul class="navPage-subMenu-list">
@@ -11,7 +13,7 @@
             <li class="navPage-subMenu-item">
                 {{#if children}}
                     <a
-                        class="navPage-subMenu-action navPages-action has-subMenu"
+                        class="navPage-subMenu-action has-subMenu"
                         href="{{url}}"
                         data-collapsible="navPages-{{id}}"
                         data-collapsible-disabled-breakpoint="medium"

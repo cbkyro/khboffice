@@ -21,7 +21,7 @@
 // -----------------------------------------------------------------------------
 
 .heroCarousel {
-    margin-bottom: (spacing("double") + spacing("single"));
+    // margin-bottom: (spacing("double") + spacing("single"));
     margin-top: -(spacing("single")); // 3
 
     @include breakpoint("medium") {
@@ -69,12 +69,12 @@
         bottom: spacing("third");
 
         @include breakpoint("medium") {
-            bottom: spacing("single");
+            bottom: spacing("double");
         }
 
         // scss-lint:disable SelectorDepth, NestingDepth
         li {
-            @include carouselOpaqueBackgrounds($slick-dot-bgColor);
+            // @include carouselOpaqueBackgrounds($slick-dot-bgColor);
         }
     }
 }

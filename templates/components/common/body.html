@@ -1,7 +1,11 @@
 <div class="body">
     {{#block "hero"}} {{/block}}
+    {{#if template_file '===' 'pages/home'}}
+    	{{#block "page"}} {{/block}}
+    {{else}}
     <div class="container">
         {{#block "page"}} {{/block}}
     </div>
+    {{/if}}
     {{> components/common/modal}}
 </div>

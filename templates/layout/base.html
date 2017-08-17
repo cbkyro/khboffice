@@ -26,6 +26,15 @@
         {{#if page_type '===' 'product'}}
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         {{/if}}
+        
+        <!-- New Design -->
+        {{{stylesheet '/assets/css/bootstrap.css'}}}
+        {{{stylesheet '/assets/css/animate.css'}}}
+        <script src="https://use.fontawesome.com/94f93ad40b.js"></script>
+        {{{stylesheet '/assets/css/style.css'}}}
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
     </head>
     <body>
         {{{snippet 'header'}}}
@@ -49,6 +58,17 @@
 
         {{{footer.scripts}}}
         {{{snippet 'footer'}}}
+        
+        <!-- New Design -->
+        <script src="{{cdn 'assets/js/jquery.js'}}"></script>
+        <!-- Bootstrap - Latest compiled and minified JavaScript -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="{{cdn 'assets/js/flexslider.js'}}"></script>
+		<script src="{{cdn 'assets/js/smoothscroll.js'}}"></script>
+		<script src="{{cdn 'assets/js/softr.js'}}"></script>
+        
+        
         
         <script>
             window.QUOTENINJA_STOREID = "e3egl";

@@ -1,7 +1,23 @@
-<div class="heroCarousel-content{{#unless show_background}} heroCarousel-content--empty{{/unless}}">
+<!-- <div class="heroCarousel-content{{#unless show_background}} heroCarousel-content--empty{{/unless}}">
     <h1 class="heroCarousel-title">{{{heading}}}</h1>
     <p class="heroCarousel-description">{{{text}}}</p>
     {{#if button_text}}
         <span class="heroCarousel-action button button--primary button--large">{{button_text}}</span>
     {{/if}}
+</div> -->
+
+
+<div class="caption-wrap hidden-xs">
+    <div class="caption-content animated fadeInRight">
+        <h2 class="tagline">
+            <b>{{{heading}}}</b>
+            <br>Scale Gracefully.
+        </h2>
+        <h3 class="subline">{{{text}}}</h3>
+        {{#if button_text}}
+        <div class="buttonWarp">
+            <span class="btn btn-green btn-lg">{{button_text}}</span>
+        </div>
+        {{/if}}
+    </div>
 </div>

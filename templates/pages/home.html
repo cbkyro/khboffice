@@ -23,19 +23,29 @@ blog:
     {{#each shipping_messages}}
         {{> components/common/alert-info message}}
     {{/each}}
+    
+{{> components/home/sign-up}}
+{{> components/home/service}}
+{{> components/home/tabbed}}
+{{> components/home/features}}
+{{> components/home/featured-service}}
+{{> components/home/reviews}}
+{{> components/home/cta-big}}
 
-<div class="main full">
-    {{#if products.featured}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-    {{/if}}
-
-    {{#if products.top_sellers}}
-        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-    {{/if}}
-
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
-    {{/if}}
+<div class="container">
+	<div class="main full">
+	    {{#if products.featured}}
+	        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+	    {{/if}}
+	
+	    {{#if products.top_sellers}}
+	        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+	    {{/if}}
+	
+	    {{#if products.new}}
+	        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+	    {{/if}}
+	</div>
 </div>
 {{/partial}}
 {{> layout/base}}
