@@ -7,8 +7,8 @@
         "autoplay": true,
         "autoplaySpeed": {{carousel.swap_frequency}}
     }'>
-    {{#each carousel.slides}}
-    <div class="heroCarousel-slide {{#if ../theme_settings.homepage_stretch_carousel_images}}heroCarousel-slide--stretch{{/if}}"
+    {{!each carousel.slides}}
+    <!-- <div class="heroCarousel-slide {{#if ../theme_settings.homepage_stretch_carousel_images}}heroCarousel-slide--stretch{{/if}}"
         style="background-image: url({{image}})">
         <a href="{{url}}">
             <img class="heroCarousel-image" src="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"/>
@@ -24,6 +24,25 @@
                 {{/if}}
             {{/if}}
         </a>
+    </div> -->
+    {{!each}}
+    
+    <div class="heroCarousel-slide {{#if ../theme_settings.homepage_stretch_carousel_images}}heroCarousel-slide--stretch{{/if}}"
+        style="background-image: url('https://cdn6.bigcommerce.com/s-e3egl/product_images/uploaded_images/slide-01.jpg?t=1502941897')">
+        <a href="#">
+            <img class="heroCarousel-image" src="https://cdn6.bigcommerce.com/s-e3egl/product_images/uploaded_images/slide-01.jpg?t=1502941897" />
+            <div class="caption-wrap hidden-xs">
+			    <div class="caption-content animated fadeInRight">
+			        <h2 class="tagline">
+			            <b>Grow Together</b>
+			            <br>Scale Gracefully.
+			        </h2>
+			        <h3 class="subline">Make your QuickBooks better with <br>our Certified ProAdvisors</h3>
+			        <div class="buttonWarp">
+			            <span class="btn btn-green btn-lg">Sign up for your QuickBooks Online?</span>
+			        </div>
+			    </div>
+			</div>
+        </a>
     </div>
-    {{/each}}
 </section>
