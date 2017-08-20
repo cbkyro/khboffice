@@ -1526,6 +1526,27 @@ textarea {
 #contact-page .right-contact address {
     margin-top: 50px;
 }
+
+.modal {
+    left: 50%;
+    margin: 0 auto;
+    max-height: 90%;
+    max-width: 95%;
+    min-height: 240px;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0;
+    right: 0;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-content {
+    border: medium none;
+    box-shadow: none;
+    margin: 15px 30px;
+}
+
 /* LOADING ANIMATION */
 
 .pace {

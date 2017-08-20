@@ -194,7 +194,48 @@
 	                <input type="hidden" name="product_id" value="{{product.id}}"/>
 	                    {{#each product.customizations}}
 	                        {{{dynamicComponent 'components/products/customizations'}}}
-	                    {{/each4>		                <div data-product-option-chant" style="display:none;">		                    {{#each product.options}}		                        {{{dynamicComponent 'components/products/options'}}}		                    {{/each}}		                </div>
+	                    {{/each}}
+	                  <!-- <div class="panel-group">
+					    <div class="panel panel-default">
+					      <div class="panel-heading">
+					        <h4 class="panel-title">
+					          <a data-toggle="collapse" href="#collapse1">Collapsible list group</a>
+					        </h4>
+					      </div>
+					      <div id="collapse1" class="panel-collapse collapse">
+					        <div data-product-option-change style="display:none;">
+		                      {{#each product.options}}
+		                          {{{dynamicComponent 'components/products/options'}}}
+		                      {{/each}}
+		                    </div>
+					        <div class="panel-footer">Footer</div>
+					      </div>
+					    </div>
+					  </div>
+					</div> -->
+					<dd class="productView-info-value size-chart" style="">
+                        <a href="" data-reveal-id="softwareOptionsModal">
+                            Choose Options
+                      </a>
+                    </dd>
+					<div id="softwareOptionsModal" class="modal modal--medium" data-reveal="">
+					    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+					        <span aria-hidden="true">&#215;</span>
+					    </a>
+					    <div class="modal-header">
+                            <h2 class="modal-header-title">Choose Options</h2>
+                            <a href="#" class="modal-close" aria-label="Close"><span aria-hidden="true">×</span></a>
+                        </div>
+					    <div class="modal-content">
+					    	<div data-product-option-change style="display:none;">
+		                      {{#each product.options}}
+		                          {{{dynamicComponent 'components/products/options'}}}
+		                      {{/each}}
+		                    </div>
+					    </div>
+					    <div class="loadingOverlay"></div>
+					</div>
+					
 	                {{#if product.event_date}}
 	                    {{> components/products/event-date}}
 	                {{/if}}
