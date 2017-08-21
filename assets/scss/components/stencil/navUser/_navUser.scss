@@ -67,6 +67,8 @@
     padding: spacing("base") spacing("half");
     text-decoration: none;
     text-transform: uppercase;
+      font-family: stencilFontFamily("headings-font");
+      font-size: 18px;
 
     &:hover,
     &.is-open {
@@ -132,6 +134,7 @@
             padding-left: rem-calc(2px);
         }
     }
+    a img { max-width: 21px !important; }
 }
 
 .navUser-item--cart {
@@ -239,6 +242,7 @@
 .dropdown--quickSearch {
     background-color: $dropdown--quickSearch-backgroundColor;
     padding: spacing("single") 0;
+    position: fixed !important;
 
     @include breakpoint("small") {
         padding: spacing("double");
@@ -251,11 +255,17 @@
         right: 0 !important; // 1
         width: 100% !important;
         z-index: zIndex("high");
+          background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+          position: fixed;
+          height: 100vh;
+          top: 0 !important;
+          overflow-y: scroll;
     }
 
     .form {
         margin: auto;
         max-width: 30rem;
+          margin-top: 10em;
     }
 
     .form,
@@ -266,6 +276,12 @@
     .form-input {
         font-size: fontSize("small");
         height: unset;
+          background: transparent;
+          border: none;
+          border-bottom: solid #666666 1px;
+          color: #ffffff;
+          
+          &::placeholder { color: #ffffff; }
     }
 
     .productGrid {
@@ -274,6 +290,7 @@
         @include breakpoint("small") {
             padding: spacing("double") 0 0;
         }
+        
     }
 }
 
@@ -296,6 +313,8 @@
     margin-left: spacing("eighth");
     text-align: center;
     width: 20px; // 1
+    position: absolute; 
+    top: 10px;    
 }
 
 .countPill--positive {

@@ -107,7 +107,7 @@
 // -----------------------------------------------------------------------------
 
 .productView-details {
-    // margin-bottom: spacing("single") + spacing("third");
+    margin-bottom: spacing("single") + spacing("third");
 }
 
 
@@ -343,7 +343,16 @@
             }
         }
     }
+    
+    .form-select { 
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 24.25rem;
+      text-align: left;
+    }
 }
+
+.button { font-size: 0.75rem; }
 
 
 // Product list (with images)

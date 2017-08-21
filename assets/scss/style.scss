@@ -235,7 +235,7 @@ a {
 /*
 * NAVGATION
 */
-
+.navbar { position: sticky; margin-bottom: 0; }
 .navbar-inverse {
     background-color: #1c2334;
     border: 0;
@@ -246,7 +246,7 @@ a {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     background: #8DC539;
-    height: 71px;
+    height: 72px;
     width: 225px;
     transition: none;
 }
@@ -266,6 +266,9 @@ a {
     font-size: 16px;
     border-right: solid #191D27 1px;
     color: #CECDD8;
+}
+.navbar-inverse .navbar-nav>li>a.icons { 
+    padding: 25px 20px;
 }
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-nav>li>a:focus {

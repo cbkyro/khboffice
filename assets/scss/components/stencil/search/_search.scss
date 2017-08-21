@@ -25,6 +25,7 @@
 
 .quickSearchResults {
     margin-top: spacing("single");
+    text-align: center;
 
     @include breakpoint("medium") {
         margin-top: 0;
@@ -32,6 +33,7 @@
 
     .modal-close {
         display: none;
+        top: 0 !important;
 
         @include breakpoint("medium") {
             display: block;
@@ -92,4 +94,20 @@
     font-size: fontSize("largest");
     margin: spacing("single") 0 0;
     text-align: center;
+      color: #eeeeee;
+}
+
+#quickSearch {
+  .modal-close {
+        display: none;
+
+        @include breakpoint("medium") {
+            display: block;
+            top: 5% !important;
+            right: 0;
+            color: #eeeeee;
+            opacity: 0.7;
+        }
+    }
+  
 }
