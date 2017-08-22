@@ -314,6 +314,14 @@ color: #F8F8F8;
     background: #1c2334;
     margin: 18px 20px;
 }
+#cart-preview-dropdown {
+    background: #ffffff none repeat scroll 0 0;
+    border: thin solid rgba(36, 40, 51, 0.2);
+    max-width: 400px;
+    min-width: 400px;
+    width: 100%;
+}
+
 /*
 * Slider
 */
@@ -885,22 +893,22 @@ media_tag_6 {
 #footer h5 {
     color: #fff
 }
-#footer .top-footer,
+.top-footer,
 #footer .btm-footer {
     background: #202738;
     padding: 20px 0;
 }
-#footer .top-footer img {
+.top-footer img {
     position: absolute;
     right: 140px;
     margin: -120px auto;
     width: 250px;
 }
-#footer .top-footer .f-left h3 {
+.top-footer .f-left h3 {
     color: #fff;
     margin: 10px 0 10px;
 }
-#footer .top-footer .cta {
+.top-footer .cta {
     margin-top: 20px;
 }
 #footer .md-footer {

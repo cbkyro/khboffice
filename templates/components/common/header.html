@@ -57,8 +57,8 @@
 				        </li>
 				        <li class="navUser-item navUser-item--account">
 					            {{#if customer}}
-					                <a class="navUser-action icons" href="{{urls.account.index}}"><img class="navUser-item-cartLabel" src="{{cdn 'img/a-icon.png'}}"></a>
-					                <a class="navUser-action icons" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+					                <a class="navUser-action icons" href="{{urls.account.index}}"><img class="navUser-item-cartLabel" src="{{cdn 'img/account-icon.png'}}"></a>
+					                <a class="navUser-action icons" href="{{urls.auth.logout}}"><img class="navUser-item-cartLabel" src="{{cdn 'img/logout-icon.png'}}"></a>
 					            {{else}}
 					                {{#if settings.account_creation_enabled}}
 					                	<a class="icons" href="{{urls.auth.login}}"><img class="navUser-item-cartLabel" src="{{cdn 'img/account-icon.png'}}"></a>
