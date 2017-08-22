@@ -24,141 +24,20 @@
     <section class="md-footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 col-xs-12">
+                <div class="col-sm-3 col-xs-12" data-section-type="storeInfo">
                     <h4>Contact</h4>
-                    <a href="tel:7049916687">
-                    	<p> Call us <strong>704-991-6687</strong></p>
+                    <a href="tel:{{lang phone_number=settings.phone_number}}">
+                    	{{#if settings.phone_number}}
+			                <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
+			            {{/if}}
                    </a>
-                    <address>
-                        KHBoffice
-                        <br>4549 Parnell Street
-                        <br> Indian Trail, NC 28079
-                        <br>
-                    </address>
+                   {{settings.store_name}}
+                    <address>{{nl2br settings.address}}</address>
                 </div>
                 <!-- .col 3 -->
-                <div class="col-md-3 col-xs-6">
-                    <h4>Navigate</h4>
-                    <ul class="list-unstyled links">
-                        <li>
-                            <a href="#">About us</a>
-                        </li>
-                        <li>
-                            <a href="#">Custom Bookkeeping</a>
-                        </li>
-                        <li>
-                            <a href="#">Software Solutions</a>
-                        </li>
-                        <li>
-                            <a href="#">Reviews</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <h4>Shop QuickBooks</h4>
-                    <ul class="list-unstyled links">
-                        <li>
-                            <a href="#">Desktop Enterprise Accountant</a>
-                        </li>
-                        <li>
-                            <a href="#">Desktop Pro</a>
-                        </li>
-                        <li>
-                            <a href="#">Desktop Premier & Industry</a>
-                        </li>
-                        <li>
-                            <a href="#">Desktop Accountant</a>
-                        </li>
-                        <li>
-                            <a href="#">Desktop Enterprise</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- .col 3 -->
-                <div class="col-md-3 col-xs-6">
-                    <div class="list-unstyled links">
-                        <h4 class="heading">&nbsp;</h4>
-                        <!-- <a href="#">Inspiration</a>
-                        <a href="#">Bootstrap</a>
-                        <a href="#">Design</a>
-                        <a href="#">Corporate Design</a>
-                        <a href="#">Boostrap 3</a>
-                        <a href="#">Corporate</a>
-                        <a href="#">Clean</a>
-                        <a href="#">Cheap</a> -->
-                        <ul class="list-unstyled links">
-                            <li>
-                                <a href="#">Enterprise Hosted - Cloud</a>
-                            </li>
-                            <li>
-                                <a href="#">Online</a>
-                            </li>
-                            <li>
-                                <a href="#">Point of Sale Desktop</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="btm-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-xs-12">
-                    <p>Copyright @ 2017 KHBoffice.com</p>
-                </div>
-                <!-- .col 8 -->
-                <div class="col-sm-4 hidden-xs">
-                    <ul class="socials list-unstyled pull-right">
-                        <li>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google+">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Youtube">
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- .col-4 -->
-            </div>
-        </div>
-    </section>
-</footer>
-
-
-
-<!-- <footer class="footer" role="contentinfo">
-    <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
-            <article class="footer-info-col
-                footer-info-col--social
-                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
-                data-section-type="footer-webPages">
-                    <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
-                    {{> components/common/social-links}}
-            </article>
-        {{/if}}
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <div class="col-md-3 col-xs-6" data-section-type="footer-webPages">
                 <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
-                <ul class="footer-info-list">
+                <ul class="footer-info-list links">
                     {{#each pages}}
                         <li>
                             <a href="{{url}}">{{name}}</a>
@@ -168,62 +47,50 @@
                         <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
                     </li>
                 </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
-
-            {{#if theme_settings.shop_by_brand_show_footer}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-            {{/if}}
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
-                {{#if settings.show_newsletter_box}}
-                    {{> components/common/subscription-form}}
-                {{/if}}
-                {{> components/common/payment-icons}}
-            </article>
-        </section>
-        {{#if theme_settings.geotrust_ssl_common_name}}
-            <div class="footer-geotrust-ssl-seal">
-                {{> components/common/geotrust-ssl-seal}}
+                </div>
+                
+                {{#if theme_settings.shop_by_brand_show_footer}}
+	            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
+	                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
+	                <ul class="footer-info-list">
+	                    {{#each shop_by_brand}}
+	                        <li>
+	                            <a href="{{url}}">{{name}}</a>
+	                        </li>
+	                    {{/each}}
+	                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
+	                </ul>
+	            </article>
+	            {{/if}}
+                
+                <article class="footer-info-col" data-section-type="newsletterSubscription">
+	                {{#if settings.show_newsletter_box}}
+	                    {{> components/common/subscription-form}}
+	                {{/if}}
+	                {{> components/common/payment-icons}}
+	            </article>
+                <!-- .col 3 -->
             </div>
-        {{/if}}
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">Powered by <a href="https://www.bigcommerce.com/" rel="nofollow">BigCommerce</a></p>
+        </div>
+    </section>
+    <section class="btm-footer">
+        <div class="container">
+            <div class="row">
+                {{#if theme_settings.show_copyright_footer}}
+		            <div class="col-sm-8 col-xs-12">
+		                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+		            </div>
+		        {{/if}}
+                <!-- .col 8 -->
+                {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_right'}}
+		            <article class="
+		                footer-info-col--social
+		                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
+		                data-section-type="footer-webPages">
+		                    {{> components/common/social-links}}
+		            </article>
+		        {{/if}}
             </div>
-        {{/if}}
-        {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
-            </div>
-        {{/if}}
-    </div>
-</footer> -->
+        </div>
+    </section>
+</footer>

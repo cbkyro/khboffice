@@ -713,12 +713,12 @@
     },
     "newsletter": {
         "subscribe": "Subscribe to our newsletter",
-        "subscribe_intro": "Get the latest updates on new products and upcoming sales",
+        "subscribe_intro": "Get the latest updates on new products and annoucements",
         "subscribe_submit": "Subscribe",
         "email_placeholder": "Your email address",
         "subscribed_heading": "Thanks for Subscribing!",
         "subscribed_heading_error": "Oops...",
-        "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",
+        "subscribed_message": "Thank you for joining our mailing list. You'll begin receiving our emails shortly",
         "unsubscribed_heading": "Unsubscribed!",
         "unsubscribed_message": "You will no longer receive marketing emails from <b>{store_name}</b>"
     },

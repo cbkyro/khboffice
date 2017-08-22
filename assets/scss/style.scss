@@ -191,6 +191,11 @@ a {
 }
 /* Sections bg color 50% / 50% */
 
+.white-bg {
+    background: rgb(255, 255, 255) none repeat scroll 0 0;
+    display: table;
+    width: 100%;
+}
 .grey-bg-50 {
     position: relative;
     border-bottom: 1px solid rgba(182, 196, 209, 0.3);
@@ -236,6 +241,7 @@ a {
 * NAVGATION
 */
 .navbar { position: sticky; margin-bottom: 0; }
+.navbar-collapse { max-height: 100%; }
 .navbar-inverse {
     background-color: #1c2334;
     border: 0;
@@ -735,7 +741,8 @@ media_tag_6 {
     white-space: nowrap;
 }
 .pricing ul.bullets {
-    margin: 20px 0;
+    margin: 20px 0 50px;
+    float: left;
 }
 .pricing ul.bullets li {
     background: url("../img/icons/tick4.svg") no-repeat center left;
@@ -759,6 +766,10 @@ media_tag_6 {
 }
 #clients .logos {
     margin: 40px 0 70px;
+}
+#clients.dark-bg .logos {
+    background: #ffffff;
+    padding: 15px;
 }
 #clients .logos img {
     width: 80%;
@@ -870,7 +881,8 @@ media_tag_6 {
     background: #1c2334;
 }
 #footer h3,
-#footer h4 {
+#footer h4,
+#footer h5 {
     color: #fff
 }
 #footer .top-footer,

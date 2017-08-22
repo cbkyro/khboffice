@@ -58,7 +58,7 @@
 }
 
 .footer-info-col--social {
-    width: 100%;
+    // width: 100%;
 }
 
 .footer-info-col--left {
@@ -161,4 +161,8 @@
     table {
         margin: auto;
     }
+}
+
+#footer .form-prefixPostfix input {
+    font-size: 13px !important;
 }
