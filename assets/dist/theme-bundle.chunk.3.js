@@ -1,19 +1,19 @@
 webpackJsonp([3],{
 
-/***/ 351:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nod_validate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(352);
 // Hook our SCSS framework form field status classes into the nod validation system before use
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorClass='form-field--error';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.successClass='form-field--success';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorMessageClass='form-inlineMessage';// Register validate functions
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.checkFunctions['min-max']=__WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__["a" /* default */];/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a);
 
 /***/ }),
 
-/***/ 352:
+/***/ 351:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,11 +30,11 @@ var forms={email:function email(value){var re=/^.+@.+\..+/;return re.test(value)
 
 /***/ }),
 
-/***/ 353:
+/***/ 352:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
@@ -42,10 +42,10 @@ function minMaxValidate(minInputSelector,maxInputSelector){function validate(cb)
 
 /***/ }),
 
-/***/ 354:
+/***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
-var indexOfNaN = __webpack_require__(362);
+var indexOfNaN = __webpack_require__(361);
 
 /**
  * The base implementation of `_.indexOf` without support for binary searches.
@@ -76,7 +76,7 @@ module.exports = baseIndexOf;
 
 /***/ }),
 
-/***/ 355:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 var isNumber = __webpack_require__(228);
@@ -117,7 +117,7 @@ module.exports = isNaN;
 
 /***/ }),
 
-/***/ 356:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
@@ -1361,23 +1361,23 @@ if (typeof module !== 'undefined' && module.exports) {
 
 /***/ }),
 
-/***/ 357:
+/***/ 356:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = classifyForm;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Validators; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return insertStateHiddenField; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nod__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_forms__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nod__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_forms__ = __webpack_require__(351);
 var inputTagNames=['input','select','textarea'];/**
  * Apply class name to an input element on its type
  * @param {object} input
@@ -1451,24 +1451,24 @@ if(isOptional&&val.length===0){return cb(true)}cb(result)},errorMessage:requirem
 
 /***/ }),
 
-/***/ 358:
+/***/ 357:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(359);
+module.exports = __webpack_require__(358);
 
 
 /***/ }),
 
-/***/ 359:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(354),
+var baseIndexOf = __webpack_require__(353),
     getLength = __webpack_require__(95),
     isArray = __webpack_require__(14),
     isIterateeCall = __webpack_require__(94),
-    isLength = __webpack_require__(42),
+    isLength = __webpack_require__(41),
     isString = __webpack_require__(230),
-    values = __webpack_require__(363);
+    values = __webpack_require__(362);
 
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -1523,7 +1523,7 @@ module.exports = includes;
 
 /***/ }),
 
-/***/ 360:
+/***/ 359:
 /***/ (function(module, exports) {
 
 /**
@@ -1552,11 +1552,11 @@ module.exports = baseValues;
 
 /***/ }),
 
-/***/ 361:
+/***/ 360:
 /***/ (function(module, exports, __webpack_require__) {
 
-var deburr = __webpack_require__(366),
-    words = __webpack_require__(367);
+var deburr = __webpack_require__(365),
+    words = __webpack_require__(366);
 
 /**
  * Creates a function that produces compound words out of the words in a
@@ -1585,7 +1585,7 @@ module.exports = createCompounder;
 
 /***/ }),
 
-/***/ 362:
+/***/ 361:
 /***/ (function(module, exports) {
 
 /**
@@ -1615,10 +1615,10 @@ module.exports = indexOfNaN;
 
 /***/ }),
 
-/***/ 363:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(360),
+var baseValues = __webpack_require__(359),
     keys = __webpack_require__(28);
 
 /**
@@ -1655,10 +1655,10 @@ module.exports = values;
 
 /***/ }),
 
-/***/ 364:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
-var createCompounder = __webpack_require__(361);
+var createCompounder = __webpack_require__(360);
 
 /**
  * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
@@ -1689,7 +1689,7 @@ module.exports = camelCase;
 
 /***/ }),
 
-/***/ 365:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(227);
@@ -1717,7 +1717,7 @@ module.exports = capitalize;
 
 /***/ }),
 
-/***/ 366:
+/***/ 365:
 /***/ (function(module, exports) {
 
 /**
@@ -1745,7 +1745,7 @@ module.exports = identity;
 
 /***/ }),
 
-/***/ 367:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(227),
@@ -1790,15 +1790,15 @@ module.exports = words;
 
 /***/ }),
 
-/***/ 408:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_nod__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_nod__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_collapsible__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_models_forms__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_models_forms__ = __webpack_require__(351);
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function')}}var _class=function(){function _class($reviewForm){_classCallCheck(this,_class);this.validator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_nod__["a" /* default */])({submit:$reviewForm.find('input[type="submit"]')});this.$reviewsContent=__WEBPACK_IMPORTED_MODULE_0_jquery___default()('#product-reviews');this.$collapsible=__WEBPACK_IMPORTED_MODULE_0_jquery___default()('[data-collapsible]',this.$reviewsContent);this.initLinkBind();this.injectPaginationLink();this.collapseReviews()}/**
      * On initial page load, the user clicks on "(12 Reviews)" link
      * The browser jumps to the review page and should expand the reviews section
@@ -1810,7 +1810,7 @@ this.$collapsible.trigger(__WEBPACK_IMPORTED_MODULE_2__common_collapsible__["b" 
 
 /***/ }),
 
-/***/ 409:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1830,11 +1830,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__page_manager__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_reviews__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_reviews__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_collapsible__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_product_details__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__product_video_gallery__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_form_utils__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__product_video_gallery__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_form_utils__ = __webpack_require__(356);
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function')}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError('this hasn\'t been initialised - super() hasn\'t been called')}return call&&(typeof call==='object'||typeof call==='function')?call:self}function _inherits(subClass,superClass){if(typeof superClass!=='function'&&superClass!==null){throw new TypeError('Super expression must either be null or a function, not '+typeof superClass)}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass}/*
  Import all product specific js
  */var Product=function(_PageManager){_inherits(Product,_PageManager);function Product(context){_classCallCheck(this,Product);var _this=_possibleConstructorReturn(this,_PageManager.call(this,context));_this.url=location.href;_this.$reviewLink=__WEBPACK_IMPORTED_MODULE_0_jquery___default()('[data-reveal-id="modal-review-form"]');return _this}Product.prototype.before=function before(next){var _this2=this;// Listen for foundation modal close events to sanitize URL after review.

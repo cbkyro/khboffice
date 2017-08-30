@@ -1,19 +1,19 @@
 webpackJsonp([0],{
 
-/***/ 351:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nod_validate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(352);
 // Hook our SCSS framework form field status classes into the nod validation system before use
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorClass='form-field--error';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.successClass='form-field--success';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorMessageClass='form-inlineMessage';// Register validate functions
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.checkFunctions['min-max']=__WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__["a" /* default */];/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a);
 
 /***/ }),
 
-/***/ 352:
+/***/ 351:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,11 +30,11 @@ var forms={email:function email(value){var re=/^.+@.+\..+/;return re.test(value)
 
 /***/ }),
 
-/***/ 353:
+/***/ 352:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
@@ -42,7 +42,7 @@ function minMaxValidate(minInputSelector,maxInputSelector){function validate(cb)
 
 /***/ }),
 
-/***/ 355:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 var isNumber = __webpack_require__(228);
@@ -83,7 +83,7 @@ module.exports = isNaN;
 
 /***/ }),
 
-/***/ 356:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
@@ -1327,7 +1327,7 @@ if (typeof module !== 'undefined' && module.exports) {
 
 /***/ }),
 
-/***/ 395:
+/***/ 394:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1336,7 +1336,7 @@ return true});
 
 /***/ }),
 
-/***/ 53:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1344,9 +1344,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__page_manager__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_nod__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_gift_certificate_validator__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_models_forms__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_nod__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_gift_certificate_validator__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_models_forms__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bigcommerce_stencil_utils__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__global_modal__ = __webpack_require__(66);
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function')}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError('this hasn\'t been initialised - super() hasn\'t been called')}return call&&(typeof call==='object'||typeof call==='function')?call:self}function _inherits(subClass,superClass){if(typeof superClass!=='function'&&superClass!==null){throw new TypeError('Super expression must either be null or a function, not '+typeof superClass)}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass}var GiftCertificate=function(_PageManager){_inherits(GiftCertificate,_PageManager);function GiftCertificate(context){_classCallCheck(this,GiftCertificate);var _this=_possibleConstructorReturn(this,_PageManager.call(this));_this.context=context;var $certBalanceForm=__WEBPACK_IMPORTED_MODULE_1_jquery___default()('#gift-certificate-balance');var purchaseModel={recipientName:function recipientName(val){return val.length},recipientEmail:function recipientEmail(){return __WEBPACK_IMPORTED_MODULE_4__common_models_forms__["a" /* default */].email.apply(__WEBPACK_IMPORTED_MODULE_4__common_models_forms__["a" /* default */],arguments)},senderName:function senderName(val){return val.length},senderEmail:function senderEmail(){return __WEBPACK_IMPORTED_MODULE_4__common_models_forms__["a" /* default */].email.apply(__WEBPACK_IMPORTED_MODULE_4__common_models_forms__["a" /* default */],arguments)},customAmount:function customAmount(value,min,max){return value&&value>=min&&value<=max},setAmount:function setAmount(value,options){var found=false;options.forEach(function(option){if(option===value){found=true;return false}});return found}};var $purchaseForm=__WEBPACK_IMPORTED_MODULE_1_jquery___default()('#gift-certificate-form');var $customAmounts=$purchaseForm.find('input[name="certificate_amount"]');var purchaseValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__common_nod__["a" /* default */])({submit:'#gift-certificate-form input[type="submit"]',delay:300});if($customAmounts.length){var $element=$purchaseForm.find('input[name="certificate_amount"]');var min=$element.data('min');var minFormatted=$element.data('min-formatted');var max=$element.data('max');var maxFormatted=$element.data('max-formatted');purchaseValidator.add({selector:'#gift-certificate-form input[name="certificate_amount"]',validate:function validate(cb,val){var numberVal=Number(val);if(!numberVal){cb(false)}cb(numberVal>=min&&numberVal<=max)},errorMessage:'You must enter a certificate amount between '+minFormatted+' and '+maxFormatted+'.'})}purchaseValidator.add([{selector:'#gift-certificate-form input[name="to_name"]',validate:function validate(cb,val){var result=purchaseModel.recipientName(val);cb(result)},errorMessage:_this.context.toName},{selector:'#gift-certificate-form input[name="to_email"]',validate:function validate(cb,val){var result=purchaseModel.recipientEmail(val);cb(result)},errorMessage:_this.context.toEmail},{selector:'#gift-certificate-form input[name="from_name"]',validate:function validate(cb,val){var result=purchaseModel.senderName(val);cb(result)},errorMessage:_this.context.fromName},{selector:'#gift-certificate-form input[name="from_email"]',validate:function validate(cb,val){var result=purchaseModel.senderEmail(val);cb(result)},errorMessage:_this.context.fromEmail},{selector:'#gift-certificate-form input[name="certificate_theme"]:first-of-type',triggeredBy:'#gift-certificate-form input[name="certificate_theme"]',validate:function validate(cb){var val=$purchaseForm.find('input[name="certificate_theme"]:checked').val();cb(typeof val==='string')},errorMessage:_this.context.certTheme},{selector:'#gift-certificate-form input[name="agree"]',validate:function validate(cb){var val=$purchaseForm.find('input[name="agree"]').get(0).checked;cb(val)},errorMessage:_this.context.agreeToTerms},{selector:'#gift-certificate-form input[name="agree2"]',validate:function validate(cb){var val=$purchaseForm.find('input[name="agree2"]').get(0).checked;cb(val)},errorMessage:_this.context.agreeToTerms}]);if($certBalanceForm.length){var balanceVal=_this.checkCertBalanceValidator($certBalanceForm);$certBalanceForm.submit(function(){balanceVal.performCheck();if(!balanceVal.areAll('valid')){return false}})}$purchaseForm.submit(function(event){purchaseValidator.performCheck();if(!purchaseValidator.areAll('valid')){return event.preventDefault()}});__WEBPACK_IMPORTED_MODULE_1_jquery___default()('#gift-certificate-preview').click(function(event){event.preventDefault();purchaseValidator.performCheck();if(!purchaseValidator.areAll('valid')){return}var modal=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__global_modal__["a" /* defaultModal */])();var previewUrl=__WEBPACK_IMPORTED_MODULE_1_jquery___default()(event.currentTarget).data('preview-url')+'&'+$purchaseForm.serialize();modal.open();__WEBPACK_IMPORTED_MODULE_5__bigcommerce_stencil_utils__["a" /* api */].getPage(previewUrl,{},function(err,content){if(err){return modal.updateContent(_this.context.previewError)}modal.updateContent(content,{wrap:true})})});return _this}GiftCertificate.prototype.checkCertBalanceValidator=function checkCertBalanceValidator($balanceForm){var balanceValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__common_nod__["a" /* default */])({submit:$balanceForm.find('input[type="submit"]')});balanceValidator.add({selector:$balanceForm.find('input[name="giftcertificatecode"]'),validate:function validate(cb,val){cb(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__common_gift_certificate_validator__["a" /* default */])(val))},errorMessage:'You must enter a certificate code.'});return balanceValidator};return GiftCertificate}(__WEBPACK_IMPORTED_MODULE_0__page_manager__["a" /* default */]);/* harmony default export */ __webpack_exports__["default"] = (GiftCertificate);

@@ -293,6 +293,7 @@
             display: block;
             left: 0;
             width: 100%;
+            min-width: 380px;
         }
 
         .navPages-action-moreIcon {
@@ -341,6 +342,10 @@
         // scss-lint:disable ImportantRule
         @include grid-column(3);
         padding: 0 0.75rem !important; // 1
+        
+        float: none;
+        padding: 0;
+        width: auto;
 
         .navPages-action {
             text-transform: none;

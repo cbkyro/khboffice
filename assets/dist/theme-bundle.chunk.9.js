@@ -6,13 +6,13 @@ webpackJsonp([9],{
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__page_manager__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_state_country__ = __webpack_require__(375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_state_country__ = __webpack_require__(374);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_nod__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_form_validation__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_models_forms__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_form_utils__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_nod__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_form_validation__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_models_forms__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_form_utils__ = __webpack_require__(356);
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function')}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError('this hasn\'t been initialised - super() hasn\'t been called')}return call&&(typeof call==='object'||typeof call==='function')?call:self}function _inherits(subClass,superClass){if(typeof superClass!=='function'&&superClass!==null){throw new TypeError('Super expression must either be null or a function, not '+typeof superClass)}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass}var Auth=function(_PageManager){_inherits(Auth,_PageManager);function Auth(){_classCallCheck(this,Auth);var _this=_possibleConstructorReturn(this,_PageManager.call(this));_this.formCreateSelector='form[data-create-account-form]';return _this}Auth.prototype.registerLoginValidation=function registerLoginValidation($loginForm){var _this2=this;var loginModel=__WEBPACK_IMPORTED_MODULE_5__common_models_forms__["a" /* default */];this.loginValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__common_nod__["a" /* default */])({submit:'.login-form input[type="submit"]'});this.loginValidator.add([{selector:'.login-form input[name="login_email"]',validate:function validate(cb,val){var result=loginModel.email(val);cb(result)},errorMessage:this.context.useValidEmail},{selector:'.login-form input[name="login_pass"]',validate:function validate(cb,val){var result=loginModel.password(val);cb(result)},errorMessage:this.context.enterPass}]);$loginForm.submit(function(event){_this2.loginValidator.performCheck();if(_this2.loginValidator.areAll('valid')){return}event.preventDefault()})};Auth.prototype.registerForgotPasswordValidation=function registerForgotPasswordValidation($forgotPasswordForm){var _this3=this;this.forgotPasswordValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__common_nod__["a" /* default */])({submit:'.forgot-password-form input[type="submit"]'});this.forgotPasswordValidator.add([{selector:'.forgot-password-form input[name="email"]',validate:function validate(cb,val){var result=__WEBPACK_IMPORTED_MODULE_5__common_models_forms__["a" /* default */].email(val);cb(result)},errorMessage:this.context.useValidEmail}]);$forgotPasswordForm.submit(function(event){_this3.forgotPasswordValidator.performCheck();if(_this3.forgotPasswordValidator.areAll('valid')){return}event.preventDefault()})};Auth.prototype.registerNewPasswordValidation=function registerNewPasswordValidation(){var newPasswordForm='.new-password-form';var newPasswordValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__common_nod__["a" /* default */])({submit:__WEBPACK_IMPORTED_MODULE_2_jquery___default()(newPasswordForm+' input[type="submit"]')});var passwordSelector=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(newPasswordForm+' input[name="password"]');var password2Selector=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(newPasswordForm+' input[name="password_confirm"]');__WEBPACK_IMPORTED_MODULE_6__common_form_utils__["a" /* Validators */].setPasswordValidation(newPasswordValidator,passwordSelector,password2Selector,this.passwordRequirements)};Auth.prototype.registerCreateAccountValidator=function registerCreateAccountValidator($createAccountForm){var validationModel=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__common_form_validation__["a" /* default */])($createAccountForm);var createAccountValidator=__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__common_nod__["a" /* default */])({submit:this.formCreateSelector+' input[type=\'submit\']'});var $stateElement=__WEBPACK_IMPORTED_MODULE_2_jquery___default()('[data-field-type="State"]');var emailSelector=this.formCreateSelector+' [data-field-type=\'EmailAddress\']';var $emailElement=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(emailSelector);var passwordSelector=this.formCreateSelector+' [data-field-type=\'Password\']';var $passwordElement=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(passwordSelector);var password2Selector=this.formCreateSelector+' [data-field-type=\'ConfirmPassword\']';var $password2Element=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(password2Selector);createAccountValidator.add(validationModel);if($stateElement){var $last=void 0;// Requests the states for a country with AJAX
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__common_state_country__["a" /* default */])($stateElement,this.context,function(err,field){if(err){throw new Error(err)}var $field=__WEBPACK_IMPORTED_MODULE_2_jquery___default()(field);if(createAccountValidator.getStatus($stateElement)!=='undefined'){createAccountValidator.remove($stateElement)}if($last){createAccountValidator.remove($last)}if($field.is('select')){$last=field;__WEBPACK_IMPORTED_MODULE_6__common_form_utils__["a" /* Validators */].setStateCountryValidation(createAccountValidator,field)}else{__WEBPACK_IMPORTED_MODULE_6__common_form_utils__["a" /* Validators */].cleanUpStateValidation(field)}})}if($emailElement){createAccountValidator.remove(emailSelector);__WEBPACK_IMPORTED_MODULE_6__common_form_utils__["a" /* Validators */].setEmailValidation(createAccountValidator,emailSelector)}if($passwordElement&&$password2Element){createAccountValidator.remove(passwordSelector);createAccountValidator.remove(password2Selector);__WEBPACK_IMPORTED_MODULE_6__common_form_utils__["a" /* Validators */].setPasswordValidation(createAccountValidator,passwordSelector,password2Selector,this.passwordRequirements)}$createAccountForm.submit(function(event){createAccountValidator.performCheck();if(createAccountValidator.areAll('valid')){return}event.preventDefault()})};/**
      * Request is made in this function to the remote endpoint and pulls back the states for country.
@@ -23,20 +23,20 @@ this.passwordRequirements=this.context.passwordRequirements;if($loginForm.length
 
 /***/ }),
 
-/***/ 351:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nod_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nod_validate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__ = __webpack_require__(352);
 // Hook our SCSS framework form field status classes into the nod validation system before use
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorClass='form-field--error';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.successClass='form-field--success';__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.classes.errorMessageClass='form-inlineMessage';// Register validate functions
 __WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a.checkFunctions['min-max']=__WEBPACK_IMPORTED_MODULE_1__nod_functions_min_max_validate__["a" /* default */];/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_nod_validate___default.a);
 
 /***/ }),
 
-/***/ 352:
+/***/ 351:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,11 +53,11 @@ var forms={email:function email(value){var re=/^.+@.+\..+/;return re.test(value)
 
 /***/ }),
 
-/***/ 353:
+/***/ 352:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_lang_isNaN__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
@@ -65,10 +65,10 @@ function minMaxValidate(minInputSelector,maxInputSelector){function validate(cb)
 
 /***/ }),
 
-/***/ 354:
+/***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
-var indexOfNaN = __webpack_require__(362);
+var indexOfNaN = __webpack_require__(361);
 
 /**
  * The base implementation of `_.indexOf` without support for binary searches.
@@ -99,7 +99,7 @@ module.exports = baseIndexOf;
 
 /***/ }),
 
-/***/ 355:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 var isNumber = __webpack_require__(228);
@@ -140,7 +140,7 @@ module.exports = isNaN;
 
 /***/ }),
 
-/***/ 356:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
@@ -1384,23 +1384,23 @@ if (typeof module !== 'undefined' && module.exports) {
 
 /***/ }),
 
-/***/ 357:
+/***/ 356:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = classifyForm;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Validators; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return insertStateHiddenField; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_string_capitalize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_string_camelCase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_collection_contains__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nod__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_forms__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nod__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_forms__ = __webpack_require__(351);
 var inputTagNames=['input','select','textarea'];/**
  * Apply class name to an input element on its type
  * @param {object} input
@@ -1474,24 +1474,24 @@ if(isOptional&&val.length===0){return cb(true)}cb(result)},errorMessage:requirem
 
 /***/ }),
 
-/***/ 358:
+/***/ 357:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(359);
+module.exports = __webpack_require__(358);
 
 
 /***/ }),
 
-/***/ 359:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(354),
+var baseIndexOf = __webpack_require__(353),
     getLength = __webpack_require__(95),
     isArray = __webpack_require__(14),
     isIterateeCall = __webpack_require__(94),
-    isLength = __webpack_require__(42),
+    isLength = __webpack_require__(41),
     isString = __webpack_require__(230),
-    values = __webpack_require__(363);
+    values = __webpack_require__(362);
 
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -1546,7 +1546,7 @@ module.exports = includes;
 
 /***/ }),
 
-/***/ 360:
+/***/ 359:
 /***/ (function(module, exports) {
 
 /**
@@ -1575,11 +1575,11 @@ module.exports = baseValues;
 
 /***/ }),
 
-/***/ 361:
+/***/ 360:
 /***/ (function(module, exports, __webpack_require__) {
 
-var deburr = __webpack_require__(366),
-    words = __webpack_require__(367);
+var deburr = __webpack_require__(365),
+    words = __webpack_require__(366);
 
 /**
  * Creates a function that produces compound words out of the words in a
@@ -1608,7 +1608,7 @@ module.exports = createCompounder;
 
 /***/ }),
 
-/***/ 362:
+/***/ 361:
 /***/ (function(module, exports) {
 
 /**
@@ -1638,10 +1638,10 @@ module.exports = indexOfNaN;
 
 /***/ }),
 
-/***/ 363:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(360),
+var baseValues = __webpack_require__(359),
     keys = __webpack_require__(28);
 
 /**
@@ -1678,10 +1678,10 @@ module.exports = values;
 
 /***/ }),
 
-/***/ 364:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
-var createCompounder = __webpack_require__(361);
+var createCompounder = __webpack_require__(360);
 
 /**
  * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
@@ -1712,7 +1712,7 @@ module.exports = camelCase;
 
 /***/ }),
 
-/***/ 365:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(227);
@@ -1740,7 +1740,7 @@ module.exports = capitalize;
 
 /***/ }),
 
-/***/ 366:
+/***/ 365:
 /***/ (function(module, exports) {
 
 /**
@@ -1768,7 +1768,7 @@ module.exports = identity;
 
 /***/ }),
 
-/***/ 367:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(227),
@@ -1813,7 +1813,7 @@ module.exports = words;
 
 /***/ }),
 
-/***/ 370:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(12);
@@ -1843,20 +1843,20 @@ module.exports = baseCreate;
 
 /***/ }),
 
-/***/ 375:
+/***/ 374:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_collection_each__ = __webpack_require__(378);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_collection_each__ = __webpack_require__(377);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_collection_each___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_collection_each__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_lang_isEmpty__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_lang_isEmpty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_lang_isEmpty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object_transform__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object_transform__ = __webpack_require__(386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_object_transform___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_object_transform__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bigcommerce_stencil_utils__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__form_utils__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__form_utils__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_sweetalert2__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_sweetalert2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_sweetalert2__);
 /**
@@ -1888,20 +1888,20 @@ var $selectElement=makeStateRequired($currentInput,context);addOptions(response.
 
 /***/ }),
 
-/***/ 378:
+/***/ 377:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(379);
+module.exports = __webpack_require__(378);
 
 
 /***/ }),
 
-/***/ 379:
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(231),
     baseEach = __webpack_require__(234),
-    createForEach = __webpack_require__(386);
+    createForEach = __webpack_require__(385);
 
 /**
  * Iterates over elements of `collection` invoking `iteratee` for each element.
@@ -1940,7 +1940,7 @@ module.exports = forEach;
 
 /***/ }),
 
-/***/ 386:
+/***/ 385:
 /***/ (function(module, exports, __webpack_require__) {
 
 var bindCallback = __webpack_require__(69),
@@ -1967,12 +1967,12 @@ module.exports = createForEach;
 
 /***/ }),
 
-/***/ 387:
+/***/ 386:
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayEach = __webpack_require__(231),
     baseCallback = __webpack_require__(233),
-    baseCreate = __webpack_require__(370),
+    baseCreate = __webpack_require__(369),
     baseForOwn = __webpack_require__(97),
     isArray = __webpack_require__(14),
     isFunction = __webpack_require__(236),
@@ -2035,7 +2035,7 @@ module.exports = transform;
 
 /***/ }),
 
-/***/ 394:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
