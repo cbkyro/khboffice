@@ -196,12 +196,9 @@
 	                        {{{dynamicComponent 'components/products/customizations'}}}
 	                    {{/each}}
 				      <div data-product-option-change style="display:none;">
-				      	<button type="button" class="form-select form-select--small" data-toggle="collapse" data-target="#options">Choose Options</button>
-	                    <div id="options" class="collapse">
 		                    {{#each product.options}}
 		                        {{{dynamicComponent 'components/products/options'}}}
 		                    {{/each}}
-	                  	</div>
 				      </div>
 	                {{#if product.event_date}}
 	                    {{> components/products/event-date}}
